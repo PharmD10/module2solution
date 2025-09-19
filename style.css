@@ -1,0 +1,75 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Tahoma;
+}
+header {
+	display: flex;
+	background-color: orange;
+	height: 100px;
+	align-items: center;
+	justify-content: center;
+}
+main {
+	padding: 0 3em;
+}
+.menuitem {
+	display: inline-grid;
+	position: relative;
+	margin: 20px;
+	border: 2px solid;
+	background-color: gray;
+	padding-top: 30px;
+}
+
+h2 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 150px;
+	text-align: center;
+	border: 1px solid;
+}
+#chickitem {
+	background-color: #d59897;
+}
+
+#beefitem {
+	background-color: #bf4543;
+	color: white;
+	border: 1px solid black;
+}
+
+#sushiitem {
+	background-color: #e5d097;
+}
+
+.fooditem {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	border: 1px solid;
+	text-align: center;
+	width: 150px;
+}
+
+.itemdesc {
+	padding: 10px 10px;
+}
+
+@media (min-width: 992px) {
+	.menuitem {
+		grid-column: 1/ span 1;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.menuitem {
+		grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
+    	grid-template-rows: auto;
+	}
+}
+@media (max-width: 767px) {
+	main {		
+		grid-template-columns: 1fr;
+	}
+}
